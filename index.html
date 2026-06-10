@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Atividade Hackathon - Tarefas</title>
+</head>
+<body>
+  <div id="app">
+    <nav class="tabbar" role="tablist" aria-label="Navegação principal">
+      <button id="tab-tasks" class="tab active" aria-controls="screen-tasks">Tarefas</button>
+      <button id="tab-stats" class="tab" aria-controls="screen-stats">Estatísticas</button>
+    </nav>
+
+    <main class="screens">
+      <!-- Tela de tarefas -->
+      <section id="screen-tasks" class="screen active" role="region" aria-labelledby="tab-tasks">
+        <form id="task-form" class="card">
+          <div class="row">
+            <input id="task-title" placeholder="Nova tarefa (ex: Estudar matemática)" required autocomplete="off" />
+            <select id="task-priority" aria-label="Prioridade">
+              <option value="low">Baixa</option>
+              <option value="medium" selected>Média</option>
+              <option value="high">Alta</option>
+            </select>
+          </div>
+          <div class="row small">
+            <input id="task-estimate" type="number" min="0" step="0.25" placeholder="Horas estimadas" />
+            <button type="submit" class="btn primary">Adicionar</button>
+          </div>
+        </form>
+
+        <div class="toolbar card">
+          <input id="search" placeholder="Pesquisar tarefas..." />
+          <div class="filters">
+            <select id="filter-priority">
+              <option value="all">Todas prioridades</option>
+              <option value="high">Alta</option>
+              <option value="medium">Média</option>
+              <option value="low">Baixa</option>
+            </select>
+            <select id="sort">
+              <option value="created">Mais recentes</option>
+              <option value="priority">Por prioridade</option>
+              <option value="estimate">Por estimativa</option>
+            </select>
+            <button id="clear-done" class="btn">Limpar concluídas</button>
+          </div>
+        </div>
+
+        <ul id="task-list" class="list"></ul>
+      </section>
+
+      <!-- Tela de estatísticas -->
+      <section id="screen-stats" class="screen" role="region" aria-labelledby="tab-stats">
+        <div class="card stats">
+          <div class="stat">
+            <div class="label">Total</div>
+            <div id="stat-total" class="value">0</div>
+          </div>
+          <div class="stat">
+            <div class="label">Concluídas</div>
+            <div id="stat-done" class="value">0</div>
+          </div>
+          <div class="stat">
+            <div class="label">Horas estimadas</div>
+            <div id="stat-hours" class="value">0</div>
+          </div>
+        </div>
+
+        <div class="card breakdown">
+          <h3>Distribuição por prioridade</h3>
+          <ul id="breakdown-list" class="list small"></ul>
+        </div>
+
+        <div class="card help">
+          <h3>Como usar</h3>
+          <ul>
+            <li>Adicione tarefas no formulário.</li>
+            <li>Pesquise, filtre e ordene a lista.</li>
+            <li>Marque como concluída para atualizar estatísticas.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
