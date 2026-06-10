@@ -36,19 +36,6 @@ Desenvolver uma aplicação web capaz de auxiliar usuários no controle de suas 
 - **GitHub** – Hospedagem e gerenciamento do repositório.
 
 ---
-
-## 📂 Estrutura do Projeto
-
-```text
-📦 sistema-acompanhamento-tarefas
-├── 📁 css
-│   └── style.css
-├── 📁 js
-│   └── script.js
-├── 📁 assets
-│   └── imagens
-├── index.html
-└── README.md
 ```
 
 ---
