@@ -36,8 +36,6 @@ Desenvolver uma aplicação web capaz de auxiliar usuários no controle de suas 
 - **GitHub** – Hospedagem e gerenciamento do repositório.
 
 ---
-```
-
 ---
 
 ## ⚙️ Como Executar o Projeto
